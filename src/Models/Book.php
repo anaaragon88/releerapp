@@ -10,12 +10,12 @@ class Book{
     private string $author;
     private string $gender;
     private string $isbn;
-    private ?float $price;
+    private ?string $price;
     private ?string $bookstate;
 
 
     private $database;
-    private $table ="releerapp";
+    private $table ="libros";
 
     public function __construct(int $id = null, string $bookname = "", string $author = "", string $gender = "", string $isbn = "", string $price ="", string $bookstate=""){
         $this->id = $id;
@@ -69,16 +69,19 @@ class Book{
     public function getPrice(){
         return $this->price;
     }
+    public function getBookstate(){
+        return $this->bookstate;
+    }
 
     public function findById($itemId){
         $query = $this->database->getConnection()->query("SELECT * FROM {$this->table} WHERE id={$itemId}"); 
         $result = $query->fetchAll();
         return new Book (
             $result[0]["id"],
-            $result[0]["name"],
-            $result[0]["phone"],
-            $result[0]["email"],
-            $result[0]["user_query"],
+            $result[0]["bookname"],
+            $result[0]["author"],
+            $result[0]["gender"],
+            $result[0]["isbn"],
             $result[0]["date_time"]);
 
     }

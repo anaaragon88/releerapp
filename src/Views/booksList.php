@@ -1,9 +1,5 @@
 <html>
 
-<?php
-    require_once("Components/layout.php");
-?>
-
 <body>
 
 <?php
@@ -23,7 +19,7 @@
         $id = $book->getId();
         $bookname = $book->getBookname();
         $author= $book->getAuthor();
-        $isbn = $book->getIbsn();
+        $isbn = $book->getIsbn();
         $price = $book->getPrice();
         $bookstate = $book->getBookstate();
         
