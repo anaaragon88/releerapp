@@ -36,7 +36,7 @@ class BooksController
     public function index()
     {
         $model = new Book();
-        $books = $model->allAppointment();
+        $books = $model->allBook();
         new View('booksList', ['books' => $books]);
     }
 
@@ -49,7 +49,7 @@ class BooksController
     {
         $model = new Book(
             id: null,
-            name: $request["name"],
+            bookname: $request["bookname"],
             author: $request["author"],
             gender: $request["gender"],
             isbn: $request["isbn"],
