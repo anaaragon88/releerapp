@@ -1,3 +1,5 @@
+![](./src/media/Home.png)
+
 ## Installation
 
 >> composer install
