@@ -1,4 +1,4 @@
-![](./src/media/Home.png)
+![](./src/img/Home.png)
 
 ## Installation
 
